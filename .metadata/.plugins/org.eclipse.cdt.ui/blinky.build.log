@@ -1,4 +1,4 @@
-14:44:15 **** Build of configuration Debug for project blinky ****
+14:39:36 **** Build of configuration Debug for project blinky ****
 make all 
 Building file: ../startup/cr_startup_lpc11.c
 Invoking: MCU C Compiler
@@ -112,5 +112,5 @@ arm-none-eabi-size blinky.axf; arm-none-eabi-objcopy -O binary blinky.axf blinky
    2372	      4	      8	   2384	    950	blinky.axf
 Created checksum 0xefffd62d at offset 0x1c in file blinky.bin 
 
-14:44:16 Build Finished (took 1s.331ms)
+14:39:38 Build Finished (took 1s.274ms)
 

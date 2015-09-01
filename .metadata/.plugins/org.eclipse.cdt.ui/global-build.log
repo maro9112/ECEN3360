@@ -1,117 +1,509 @@
-14:44:14 **** Clean-only build of configuration Debug for project blinky ****
-make clean 
-rm -rf  ./startup/cr_startup_lpc11.o  ./src/blinky_main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/blinky_main.d  ./driver/adc.d ./driver/can.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer16.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  blinky.axf
+14:48:04 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make all 
+make: Nothing to be done for `all'.
+14:48:05 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/adc_main.c
  
-14:44:15 **** Build of configuration Debug for project blinky ****
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6187	      4	    136	   6327	   18b7	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+14:48:13 **** Incremental Build of configuration Debug for project adc ****
+make all 
+make: Nothing to be done for `all'.
+14:48:39 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make all 
+make: Nothing to be done for `all'.
+14:48:40 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:122:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6187	      4	    136	   6327	   18b7	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+14:48:49 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make all 
+make: Nothing to be done for `all'.
+14:48:49 **** Incremental Build of configuration Debug for project adc ****
+make all 
+make: Nothing to be done for `all'.
+14:49:54 **** Incremental Build of configuration Lib for project lib_small_printf_m0 ****
+make all 
+make: Nothing to be done for `all'.
+14:49:55 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:122:2: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6195	      4	    136	   6335	   18bf	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+14:52:44 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6195	      4	    136	   6335	   18bf	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+14:53:45 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   5283	      4	    136	   5423	   152f	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+14:55:46 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:122:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13144	      4	    388	  13536	   34e0	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+15:04:23 **** Clean-only build of configuration Debug for project adc ****
+make clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/adc_main.d  ./driver/adc.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/timer16.d ./driver/timer32.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  adc.axf
+ 
+15:04:24 **** Incremental Build of configuration Debug for project adc ****
 make all 
 Building file: ../startup/cr_startup_lpc11.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:122:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
 Finished building: ../startup/cr_startup_lpc11.c
  
-Building file: ../src/blinky_main.c
+Building file: ../src/adc_main.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/blinky_main.d" -MT"src/blinky_main.d" -o "src/blinky_main.o" "../src/blinky_main.c"
-Finished building: ../src/blinky_main.c
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/adc_main.c
  
 Building file: ../driver/adc.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/adc.d" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/adc.d" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
 Finished building: ../driver/adc.c
- 
-Building file: ../driver/can.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/can.d" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
-Finished building: ../driver/can.c
- 
-Building file: ../driver/clkconfig.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
-Finished building: ../driver/clkconfig.c
  
 Building file: ../driver/crp.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/crp.d" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/crp.d" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
 Finished building: ../driver/crp.c
  
 Building file: ../driver/debug_printf.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
 Finished building: ../driver/debug_printf.c
  
 Building file: ../driver/gpio.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
 Finished building: ../driver/gpio.c
- 
-Building file: ../driver/i2c.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
-Finished building: ../driver/i2c.c
- 
-Building file: ../driver/i2cslave.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
-Finished building: ../driver/i2cslave.c
- 
-Building file: ../driver/lpc_swu.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
-Finished building: ../driver/lpc_swu.c
- 
-Building file: ../driver/rs485.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
-Finished building: ../driver/rs485.c
- 
-Building file: ../driver/small_gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
-Finished building: ../driver/small_gpio.c
- 
-Building file: ../driver/ssp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
-Finished building: ../driver/ssp.c
  
 Building file: ../driver/timer16.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
 Finished building: ../driver/timer16.c
  
 Building file: ../driver/timer32.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
 Finished building: ../driver/timer32.c
- 
-Building file: ../driver/uart.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/uart.d" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
-Finished building: ../driver/uart.c
- 
-Building file: ../driver/wdt.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
-Finished building: ../driver/wdt.c
  
 Building file: ../cmsis/core_cm0.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
 Finished building: ../cmsis/core_cm0.c
  
 Building file: ../cmsis/system_LPC11xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
 Finished building: ../cmsis/system_LPC11xx.c
  
-Building target: blinky.axf
+Building target: adc.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -Map=blinky.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "blinky.axf"  ./startup/cr_startup_lpc11.o  ./src/blinky_main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-Finished building target: blinky.axf
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size blinky.axf; arm-none-eabi-objcopy -O binary blinky.axf blinky.bin ; checksum -p LPC1114_302 -d blinky.bin;
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
    text	   data	    bss	    dec	    hex	filename
-   2372	      4	      8	   2384	    950	blinky.axf
-Created checksum 0xefffd62d at offset 0x1c in file blinky.bin 
+  13144	      4	    388	  13536	   34e0	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+15:04:26 **** Incremental Build of configuration Debug for project adc ****
+make all 
+make: Nothing to be done for `all'.
+15:07:30 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:87:10: warning: unused variable 'f' [-Wunused-variable]
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2720	      4	     48	   2772	    ad4	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+15:11:36 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:87:10: warning: unused variable 'f' [-Wunused-variable]
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2728	      4	     48	   2780	    adc	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+15:12:21 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:87:10: warning: unused variable 'f' [-Wunused-variable]
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2696	      4	     48	   2748	    abc	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+15:13:15 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:87:10: warning: unused variable 'f' [-Wunused-variable]
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2736	      4	     48	   2788	    ae4	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+15:14:20 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:122:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+../src/adc_main.c:105:7: warning: unused variable 'cat' [-Wunused-variable]
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13160	      4	    388	  13552	   34f0	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+15:19:16 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:122:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13144	      4	    388	  13536	   34e0	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+15:21:32 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:122:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+  13184	      4	    388	  13576	   3508	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+15:22:23 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:122:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13184	      4	    388	  13576	   3508	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+15:23:41 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:127:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13208	      4	    388	  13600	   3520	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+15:24:44 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:127:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13232	      4	    388	  13624	   3538	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+15:27:31 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13232	      4	    388	  13624	   3538	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+../src/adc_main.c:127:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+15:30:45 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:133:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13240	      4	    388	  13632	   3540	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+15:32:29 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:136:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13256	      4	    388	  13648	   3550	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+15:33:18 **** Incremental Build of configuration Debug for project adc ****
+make all 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/inc" -I../config -I../driver -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/adc/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+../src/adc_main.c: In function 'main':
+../src/adc_main.c:136:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/adc_main.c:85:12: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/adc_main.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+  13256	      4	    388	  13648	   3550	adc.axf
+Created checksum 0xefffd62d at offset 0x1c in file adc.bin 

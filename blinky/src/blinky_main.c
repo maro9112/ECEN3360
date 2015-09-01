@@ -103,7 +103,7 @@ int main (void)
   {
 	/* Each time we wake up... */
 	/* Check TimeTick to see whether to set or clear the LED I/O pin */
-	if ( (timer32_0_counter%(LED_TOGGLE_TICKS/COUNT_MAX)) < ((LED_TOGGLE_TICKS/COUNT_MAX)/2) )
+	if ( (timer32_0_counter%(LED_TOGGLE_TICKS/COUNT_MAX)) < ((LED_TOGGLE_TICKS/COUNT_MAX)/5) )
 	{
 	  GPIOSetValue( LED_PORT, LED_BIT, LED_OFF );
 	  on=0;

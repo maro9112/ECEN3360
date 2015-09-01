@@ -8,11 +8,11 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include subdir.mk
 -include startup/subdir.mk
 -include src/subdir.mk
 -include driver/subdir.mk
 -include cmsis/subdir.mk
+-include subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -26,25 +26,25 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: model.axf
+all: swuart.axf
 
 # Tool invocations
-model.axf: $(OBJS) $(USER_OBJS)
+swuart.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -Xlinker -Map=model.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o"model.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -Xlinker -Map=swuart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "swuart.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) model.axf
+	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) swuart.axf
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size model.axf; arm-none-eabi-objcopy -O binary model.axf model.bin ; checksum -p LPC1114/302 -d model.bin;
+	-arm-none-eabi-size swuart.axf; arm-none-eabi-objcopy -O binary swuart.axf swuart.bin ; checksum -p LPC1114_302 -d swuart.bin;
 	-@echo ' '
 
 .PHONY: all clean dependents

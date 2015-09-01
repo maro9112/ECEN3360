@@ -5,3 +5,4 @@
 USER_OBJS :=
 
 LIBS := -llib_small_printf_m0
+

@@ -12,7 +12,9 @@
 #include "target_config.h"
 
 #include "adc.h"
+#include "gpio.h"
 #include "debug_printf.h"
+#include "timer32.h"
 
 #ifdef ADC_DEBUG
 uint8_t ConvertDigital ( uint8_t digital )
@@ -80,47 +82,65 @@ int main (void)
 	   * from the startup code. SystemInit() and chip settings are defined
 	   * in the CMSIS system_<part family>.c file.
 	   */
-
   uint32_t i;
+
+  double half_period_start, half_period_end;
+
+  int on=0;
 
   /* Initialize ADC  */
   ADCInit( ADC_CLK );
 
+  /* Initialize 32-bit timer 0. TIME_INTERVAL is defined as 10mS */
+  /* You may also want to use the Cortex SysTick timer to do this */
+  init_timer32(0, TIME_INTERVAL);
+  /* Enable timer 0. Our interrupt handler will begin incrementing
+   * the TimeTick global each time timer 0 matches and resets.
+   */
+  enable_timer32(0);
+
+  /* LED Initialization code here */
+  /* Initialize GPIO (sets up clock) */
+  GPIOInit();
+  /* Set LED port pin to output */
+  GPIOSetDir( 0, 7, 1 );
+  double freq = 0;
   while(1)
   {
-#if CONFIG_ADC_ENABLE_BURST_MODE==1				/* Interrupt driven only */
-	ADCBurstRead();
-	while ( !ADC0IntDone );
-	ADC0IntDone = 0;
-#else						/* Not burst mode */
-#if CONFIG_ADC_ENABLE_ADC_IRQHANDLER==1		/* Interrupt driven */
-	for ( i = 0; i < ADC_NUM; i++ )
+	/* Read one sample from the ADC port 'AD0' */
+	ADCRead( 0 );
+	while ( !ADCIntDone );
+	ADCIntDone = 0;
+
+	if(ADCValue[0] >512)
 	{
-	  ADCRead( i );
-	  while ( !ADCIntDone );
-	  ADCIntDone = 0;
-	}
-#else  						/* Polling */
-	for ( i = 0; i < ADC_NUM; i++ )
+		if(on == 0)
+		{
+			half_period_start = timer32_0_counter;
+			GPIOSetValue(0, 7, 1);
+			on=1;
+		}
+	}else
 	{
-	  ADCValue[i] = ADCRead( i );
+		if(on == 1)
+		{
+			half_period_end = timer32_0_counter;
+			GPIOSetValue(0, 7, 0);
+			freq = 1/(2*(half_period_end - half_period_start)/100);
+			on=0;
+		}
 	}
-#endif	/* Endif interrupt driven */
-#endif	/* Endif BURST mode */
-#ifdef SEMIHOSTED_ADC_OUTPUT
-#ifndef OUTPUT_ONLY_CH0
-	for ( i = 0; i < ADC_NUM; i++ )
+
+	if(timer32_0_counter%100==0)
 	{
-		ADCBar(i, ADCValue[i]);
+		printf("FREQUENCY = %f Hz\n", freq);
 	}
-#else
-	ADCBar(0, ADCValue[0]);
-#endif
-#endif
-	}
+	/* LED lighting and analog signal frequency calculation and printing code here */
+
+
+  }
 }
 
 /******************************************************************************
 **                            End Of File
 ******************************************************************************/
-
