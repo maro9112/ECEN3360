@@ -1,10 +1,8 @@
-14:22:24 **** Incremental Build of configuration Debug for project asm_xample11 ****
+14:30:51 **** Incremental Build of configuration Debug for project asm_xample11 ****
 make all 
 Building file: ../src/main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:4:0:
-/Applications/lpcxpresso_6.1.2_177/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/unistd.h:5:29: error: no include path in which to search for unistd.h
 ../src/main.c: In function 'translateFib':
 ../src/main.c:23:18: error: incompatible types when assigning to type 'char[6]' from type 'char *'
 ../src/main.c:25:18: error: incompatible types when assigning to type 'char[6]' from type 'char *'
@@ -14,5 +12,5 @@ In file included from ../src/main.c:4:0:
 ../src/main.c:66:1: warning: control reaches end of non-void function [-Wreturn-type]
 make: *** [src/main.o] Error 1
 
-14:22:25 Build Finished (took 210ms)
+14:30:52 Build Finished (took 161ms)
 
