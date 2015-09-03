@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+extern int fibonacci(int n);
+
+int translateFib(char fibNum) {
+	return 1;
+}
+
+int main(void) {
+
+	int i=1;
+	char fibNum;
+	for(i=1; i <=20; i++){
+		printf("GOT HERE");
+		fibNum = fibonacci(i);
+		printf("fib of %d = %c\n", i, fibNum);
+		translateFib(fibNum);
+	}
+}

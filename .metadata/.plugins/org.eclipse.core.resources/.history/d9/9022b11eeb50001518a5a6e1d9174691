@@ -1,0 +1,14 @@
+extern int fibonacci(int n);
+
+int translateFib(int fibNum) {
+	return 1;
+}
+
+int main(void) {
+
+	int i=1;
+	for(i=1; i <=20; i++){
+		fibNum = fibonacci(i);
+		translateFib(fibNum);
+	}
+}

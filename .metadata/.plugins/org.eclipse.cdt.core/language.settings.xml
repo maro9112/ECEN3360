@@ -3,25 +3,6 @@
 	<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 		<provider class="org.eclipse.cdt.managedbuilder.language.settings.providers.GCCBuildCommandParser" id="com.crt.advproject.GCCBuildCommandParser" keep-relative-paths="false" name="MCU GCC Build Output Parser" parameter="(arm-none-eabi-gcc)|(arm-none-eabi-[gc]\+\+)|(gcc)|([gc]\+\+)|(clang)" prefer-non-shared="false">
 			<language id="org.eclipse.cdt.core.gcc">
-				<resource project-relative-path="driver/i2c.c">
-					<entry kind="includePath" name="/power_api_demo/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/power_api_demo/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/power_api_demo/startup">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/power_api_demo/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="TARGET_CHIP" value="LPC1114/302"/>
-					<entry kind="macro" name="TARGET_SHORTCHIP" value="lpc11"/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-				</resource>
 				<resource project-relative-path="cmsis/core_cm0.c">
 					<entry kind="includePath" name="/adc/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -61,103 +42,6 @@
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
-				<resource project-relative-path="src/ssp_main.c">
-					<entry kind="includePath" name="/ssp/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/ssp/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/ssp/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="freertos/src/tasks.c">
-					<entry kind="includePath" name="/freertos/freertos/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="src/freertos_main.c">
-					<entry kind="includePath" name="/freertos/freertos/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="src/i2cslave_main.c">
-					<entry kind="includePath" name="/i2cslave/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/i2cslave/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/i2cslave/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="src/power_api_demo.c">
-					<entry kind="includePath" name="/power_api_demo/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/power_api_demo/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/power_api_demo/startup">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/power_api_demo/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="TARGET_CHIP" value="LPC1114/302"/>
-					<entry kind="macro" name="TARGET_SHORTCHIP" value="lpc11"/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-				</resource>
 				<resource project-relative-path="config/intpriority_cr_startup_lpc11.c">
 					<entry kind="includePath" name="/intpriority/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -191,60 +75,6 @@
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
-				<resource project-relative-path="driver/timer32.c">
-					<entry kind="includePath" name="/adc/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/Debug">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="driver/wdt.c">
-					<entry kind="includePath" name="/wdt/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/wdt/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/wdt/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="src/stack.c">
-					<entry kind="includePath" name="/stackusage/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/stackusage/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/stackusage/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
 				<resource project-relative-path="driver/i2cslave.c">
 					<entry kind="includePath" name="/power_api_demo/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -264,27 +94,6 @@
 					<entry kind="macro" name="__CODE_RED" value=""/>
 					<entry kind="macro" name="__REDLIB__" value=""/>
 				</resource>
-				<resource project-relative-path="driver/adc.c">
-					<entry kind="includePath" name="/adc/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/Debug">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
 				<resource project-relative-path="src/i2c_main.c">
 					<entry kind="includePath" name="/i2c/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -300,42 +109,6 @@
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
-				<resource project-relative-path="src/invokeisp_main.c">
-					<entry kind="includePath" name="/invokeisp/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/invokeisp/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/invokeisp/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="driver/gpio.c">
-					<entry kind="includePath" name="/adc/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/Debug">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
 				<resource project-relative-path="src/wdt_main.c">
 					<entry kind="includePath" name="/wdt/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -344,30 +117,6 @@
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="includePath" name="/wdt/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="freertos/port/memmang/heap_2.c">
-					<entry kind="includePath" name="/freertos/freertos/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/driver">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>
@@ -399,21 +148,6 @@
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
-				<resource project-relative-path="src/uart_main.c">
-					<entry kind="includePath" name="/uart/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/uart/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/uart/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
 				<resource project-relative-path="config/freertos_cr_startup_lpc11.c">
 					<entry kind="includePath" name="/freertos/freertos/inc">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -431,6 +165,21 @@
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="includePath" name="/freertos/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="src/uart_main.c">
+					<entry kind="includePath" name="/uart/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/uart/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/uart/driver">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>
@@ -474,6 +223,388 @@
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
+				<resource project-relative-path="driver/clkconfig.c">
+					<entry kind="includePath" name="/power_api_demo/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/power_api_demo/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/power_api_demo/startup">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/power_api_demo/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="TARGET_CHIP" value="LPC1114/302"/>
+					<entry kind="macro" name="TARGET_SHORTCHIP" value="lpc11"/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+				</resource>
+				<resource project-relative-path="freertos/src/list.c">
+					<entry kind="includePath" name="/freertos/freertos/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="freertos/src/queue.c">
+					<entry kind="includePath" name="/freertos/freertos/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="driver/lpc_swu.c">
+					<entry kind="includePath" name="/swuart/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/swuart/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/swuart/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+				</resource>
+				<resource project-relative-path="freertos/src/croutine.c">
+					<entry kind="includePath" name="/freertos/freertos/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="driver/timer16.c">
+					<entry kind="includePath" name="/adc/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/Debug">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="driver/i2c.c">
+					<entry kind="includePath" name="/power_api_demo/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/power_api_demo/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/power_api_demo/startup">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/power_api_demo/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="TARGET_CHIP" value="LPC1114/302"/>
+					<entry kind="macro" name="TARGET_SHORTCHIP" value="lpc11"/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+				</resource>
+				<resource project-relative-path="src/freertos_main.c">
+					<entry kind="includePath" name="/freertos/freertos/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="freertos/src/tasks.c">
+					<entry kind="includePath" name="/freertos/freertos/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="src/ssp_main.c">
+					<entry kind="includePath" name="/ssp/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/ssp/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/ssp/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="src/i2cslave_main.c">
+					<entry kind="includePath" name="/i2cslave/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/i2cslave/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/i2cslave/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="src/power_api_demo.c">
+					<entry kind="includePath" name="/power_api_demo/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/power_api_demo/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/power_api_demo/startup">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/power_api_demo/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="TARGET_CHIP" value="LPC1114/302"/>
+					<entry kind="macro" name="TARGET_SHORTCHIP" value="lpc11"/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+				</resource>
+				<resource project-relative-path="driver/wdt.c">
+					<entry kind="includePath" name="/wdt/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/wdt/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/wdt/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="driver/timer32.c">
+					<entry kind="includePath" name="/adc/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/Debug">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="driver/adc.c">
+					<entry kind="includePath" name="/adc/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/Debug">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="src/stack.c">
+					<entry kind="includePath" name="/stackusage/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/stackusage/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/stackusage/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="src/invokeisp_main.c">
+					<entry kind="includePath" name="/invokeisp/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/invokeisp/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/invokeisp/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="driver/gpio.c">
+					<entry kind="includePath" name="/adc/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/adc/Debug">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="freertos/port/memmang/heap_2.c">
+					<entry kind="includePath" name="/freertos/freertos/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/driver">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
+				</resource>
+				<resource project-relative-path="src/gpio.c">
+					<entry kind="macro" name="DEBUG" value=""/>
+					<entry kind="macro" name="__CODE_RED" value=""/>
+					<entry kind="macro" name="__REDLIB__" value=""/>
+				</resource>
 				<resource project-relative-path="driver/uart.c">
 					<entry kind="includePath" name="/uart/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -482,21 +613,6 @@
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="includePath" name="/uart/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="src/rs485_main.c">
-					<entry kind="includePath" name="/rs485/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/rs485/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/rs485/driver">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>
@@ -525,24 +641,20 @@
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
-				<resource project-relative-path="driver/clkconfig.c">
-					<entry kind="includePath" name="/power_api_demo/cmsis">
+				<resource project-relative-path="src/rs485_main.c">
+					<entry kind="includePath" name="/rs485/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/power_api_demo/config">
+					<entry kind="includePath" name="/rs485/config">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/power_api_demo/startup">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/power_api_demo/driver">
+					<entry kind="includePath" name="/rs485/driver">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="TARGET_CHIP" value="LPC1114/302"/>
-					<entry kind="macro" name="TARGET_SHORTCHIP" value="lpc11"/>
 					<entry kind="macro" name="__CODE_RED" value=""/>
 					<entry kind="macro" name="__REDLIB__" value=""/>
+					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
 				<resource project-relative-path="cmsis/system_LPC11xx.c">
 					<entry kind="includePath" name="/adc/cmsis">
@@ -565,23 +677,14 @@
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
-				<resource project-relative-path="freertos/src/list.c">
-					<entry kind="includePath" name="/freertos/freertos/inc">
+				<resource project-relative-path="src/extint_main.c">
+					<entry kind="includePath" name="/extint/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+					<entry kind="includePath" name="/extint/config">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/freertos/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/driver">
+					<entry kind="includePath" name="/extint/driver">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>
@@ -603,45 +706,6 @@
 					<entry kind="macro" name="__CODE_RED" value=""/>
 					<entry kind="macro" name="__REDLIB__" value=""/>
 				</resource>
-				<resource project-relative-path="freertos/src/queue.c">
-					<entry kind="includePath" name="/freertos/freertos/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="src/extint_main.c">
-					<entry kind="includePath" name="/extint/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/extint/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/extint/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
 				<resource project-relative-path="src/intpriority_main.c">
 					<entry kind="includePath" name="/intpriority/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -659,20 +723,6 @@
 					<entry kind="macro" name="__CODE_RED" value=""/>
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="driver/lpc_swu.c">
-					<entry kind="includePath" name="/swuart/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/swuart/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/swuart/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
 				</resource>
 				<resource project-relative-path="driver/can.c">
 					<entry kind="includePath" name="/wdt/cmsis">
@@ -705,13 +755,13 @@
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
 				<resource project-relative-path="src/main.c">
-					<entry kind="includePath" name="/timedwakeup/cmsis">
+					<entry kind="includePath" name="/asm_xample11/driver">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/timedwakeup/config">
+					<entry kind="includePath" name="/asm_xample11/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/timedwakeup/driver">
+					<entry kind="includePath" name="/asm_xample11/config">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>
@@ -772,29 +822,19 @@
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
-				<resource project-relative-path="freertos/src/croutine.c">
-					<entry kind="includePath" name="/freertos/freertos/inc">
+				<resource project-relative-path="src/cr_startup_lpc11.c">
+					<entry kind="includePath" name="/asm_xample11/driver">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+					<entry kind="includePath" name="/asm_xample11/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/freertos/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/driver">
+					<entry kind="includePath" name="/asm_xample11/config">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>
 					<entry kind="macro" name="__CODE_RED" value=""/>
 					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
 				<resource project-relative-path="driver/ssp.c">
 					<entry kind="includePath" name="/ssp/cmsis">
@@ -819,27 +859,6 @@
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="includePath" name="/pwm/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="macro" name="DEBUG" value=""/>
-					<entry kind="macro" name="__CODE_RED" value=""/>
-					<entry kind="macro" name="__REDLIB__" value=""/>
-					<entry kind="macro" name="__USE_CMSIS" value=""/>
-				</resource>
-				<resource project-relative-path="driver/timer16.c">
-					<entry kind="includePath" name="/adc/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/driver">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/adc/Debug">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>
