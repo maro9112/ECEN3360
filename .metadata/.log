@@ -1628,3 +1628,6 @@ java.io.FileNotFoundException: /Users/madisonrockwell/Downloads/asm_xample11/asm
 
 !ENTRY org.eclipse.cdt.core 1 0 2015-09-03 14:10:32.227
 !MESSAGE Indexed 'asm_xample11' (20 sources, 73 headers) in 0.50 sec: 4,821 declarations; 10,126 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.01%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 14:41:29.651
+!MESSAGE Indexed 'asm_xample11' (20 sources, 36 headers) in 0.22 sec: 1,249 declarations; 2,416 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
