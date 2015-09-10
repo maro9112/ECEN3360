@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+extern int fib(int x);
+
+int fib(int x) {
+	return x;
+}
+
+void morse(int a)
+{
+
+}
+
+int main(void)
+{
+
+	int i = 1;
+	for (i=1; i<20; i++)
+	{
+		fib(i);
+		morse(i);
+	}
+}
+
+

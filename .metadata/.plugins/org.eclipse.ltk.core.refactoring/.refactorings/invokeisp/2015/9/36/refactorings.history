@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 1 resources to &apos;invokeisp&apos;" description="Move 1 resources to &apos;invokeisp&apos;" destination="/invokeisp" element1="/Lab2/asm_xample11" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1441135279448" updateReferences="true"/>
+</session>
