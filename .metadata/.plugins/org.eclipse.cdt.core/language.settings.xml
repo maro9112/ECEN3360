@@ -331,14 +331,23 @@
 					<entry kind="macro" name="__CODE_RED" value=""/>
 					<entry kind="macro" name="__REDLIB__" value=""/>
 				</resource>
-				<resource project-relative-path="src/ssp_main.c">
-					<entry kind="includePath" name="/ssp/cmsis">
+				<resource project-relative-path="src/freertos_main.c">
+					<entry kind="includePath" name="/freertos/freertos/inc">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/ssp/config">
+					<entry kind="includePath" name="/lib_small_printf_m0/inc">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/ssp/driver">
+					<entry kind="includePath" name="/freertos/cmsis">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/config">
+						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+					</entry>
+					<entry kind="includePath" name="/freertos/driver">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>
@@ -370,23 +379,14 @@
 					<entry kind="macro" name="__REDLIB__" value=""/>
 					<entry kind="macro" name="__USE_CMSIS" value=""/>
 				</resource>
-				<resource project-relative-path="src/freertos_main.c">
-					<entry kind="includePath" name="/freertos/freertos/inc">
+				<resource project-relative-path="src/ssp_main.c">
+					<entry kind="includePath" name="/ssp/cmsis">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/lib_small_printf_m0/inc">
+					<entry kind="includePath" name="/ssp/config">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
-					<entry kind="includePath" name="/freertos/cmsis">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/freertos/port/lpcxpresso/m0">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/config">
-						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-					</entry>
-					<entry kind="includePath" name="/freertos/driver">
+					<entry kind="includePath" name="/ssp/driver">
 						<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 					</entry>
 					<entry kind="macro" name="DEBUG" value=""/>

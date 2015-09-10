@@ -41,7 +41,7 @@
   10:../src/main.c **** extern int fibonacci(int n);
   11:../src/main.c **** 
   12:../src/main.c **** 
-  13:../src/main.c **** //code from https://www.lpcware.com/content/forum/what-do-you-use-to-delay
+  13:../src/main.c **** //delay code from https://www.lpcware.com/content/forum/what-do-you-use-to-delay
   14:../src/main.c **** void _delay_ms (uint16_t ms)
   15:../src/main.c **** {
   35              		.loc 1 15 0
@@ -118,473 +118,427 @@
   96 0048 AC0D0000 		.word	3500
   97              		.cfi_endproc
   98              	.LFE20:
- 100              		.global	__aeabi_idivmod
- 101              		.global	__aeabi_idiv
- 102              		.section	.rodata
- 103              		.align	2
- 104              	.LC0:
- 105 0010 31313131 		.ascii	"11111\000"
+ 100              		.section	.rodata
+ 101              		.align	2
+ 102              	.LC0:
+ 103 0010 31313131 		.ascii	"11111\000"
+ 103      3100
+ 104 0016 30313131 		.ascii	"01111\000"
+ 104      3100
+ 105 001c 30303131 		.ascii	"00111\000"
  105      3100
- 106 0016 30313131 		.ascii	"01111\000"
+ 106 0022 30303031 		.ascii	"00011\000"
  106      3100
- 107 001c 30303131 		.ascii	"00111\000"
+ 107 0028 30303030 		.ascii	"00001\000"
  107      3100
- 108 0022 30303031 		.ascii	"00011\000"
- 108      3100
- 109 0028 30303030 		.ascii	"00001\000"
- 109      3100
- 110 002e 30303030 		.ascii	"00000\000"
+ 108 002e 30303030 		.ascii	"00000\000"
+ 108      3000
+ 109 0034 31303030 		.ascii	"10000\000"
+ 109      3000
+ 110 003a 31313030 		.ascii	"11000\000"
  110      3000
- 111 0034 31303030 		.ascii	"10000\000"
+ 111 0040 31313130 		.ascii	"11100\000"
  111      3000
- 112 003a 31313030 		.ascii	"11000\000"
+ 112 0046 31313131 		.ascii	"11110\000"
  112      3000
- 113 0040 31313130 		.ascii	"11100\000"
- 113      3000
- 114 0046 31313131 		.ascii	"11110\000"
+ 113 004c 30303030 		.ascii	"00001\000"
+ 113      3100
+ 114 0052 30313030 		.ascii	"01000\000"
  114      3000
- 115              		.section	.text.translateFib,"ax",%progbits
- 116              		.align	2
- 117              		.global	translateFib
- 118              		.code	16
- 119              		.thumb_func
- 121              	translateFib:
- 122              	.LFB21:
+ 115 0058 30313031 		.ascii	"01010\000"
+ 115      3000
+ 116 005e 30303130 		.ascii	"00100\000"
+ 116      3000
+ 117 0064 30303030 		.ascii	"00000\000"
+ 117      3000
+ 118 006a 30303031 		.ascii	"00010\000"
+ 118      3000
+ 119              		.section	.text.translateFib,"ax",%progbits
+ 120              		.align	2
+ 121              		.global	translateFib
+ 122              		.code	16
+ 123              		.thumb_func
+ 125              	translateFib:
+ 126              	.LFB21:
   24:../src/main.c **** 
   25:../src/main.c **** int translateFib(int fibNum) {
- 123              		.loc 1 25 0
- 124              		.cfi_startproc
- 125 0000 80B5     		push	{r7, lr}
- 126              	.LCFI3:
- 127              		.cfi_def_cfa_offset 8
- 128              		.cfi_offset 7, -8
- 129              		.cfi_offset 14, -4
- 130 0002 A2B0     		sub	sp, sp, #136
- 131              	.LCFI4:
- 132              		.cfi_def_cfa_offset 144
- 133 0004 00AF     		add	r7, sp, #0
- 134              	.LCFI5:
- 135              		.cfi_def_cfa_register 7
- 136 0006 7860     		str	r0, [r7, #4]
-  26:../src/main.c **** 	char morse[10][6] = {"11111", "01111", "00111", "00011", "00001", "00000", "10000", "11000", "1110
- 137              		.loc 1 26 0
- 138 0008 3A1C     		mov	r2, r7
- 139 000a 3432     		add	r2, r2, #52
- 140 000c 704B     		ldr	r3, .L20
- 141 000e 111C     		mov	r1, r2
- 142 0010 1A1C     		mov	r2, r3
- 143 0012 3C23     		mov	r3, #60
- 144 0014 081C     		mov	r0, r1
- 145 0016 111C     		mov	r1, r2
- 146 0018 1A1C     		mov	r2, r3
- 147 001a FFF7FEFF 		bl	memcpy
+ 127              		.loc 1 25 0
+ 128              		.cfi_startproc
+ 129 0000 80B5     		push	{r7, lr}
+ 130              	.LCFI3:
+ 131              		.cfi_def_cfa_offset 8
+ 132              		.cfi_offset 7, -8
+ 133              		.cfi_offset 14, -4
+ 134 0002 AAB0     		sub	sp, sp, #168
+ 135              	.LCFI4:
+ 136              		.cfi_def_cfa_offset 176
+ 137 0004 00AF     		add	r7, sp, #0
+ 138              	.LCFI5:
+ 139              		.cfi_def_cfa_register 7
+ 140 0006 7860     		str	r0, [r7, #4]
+  26:../src/main.c **** 	char morse[16][6] = {"11111", "01111", "00111", "00011", "00001", "00000", "10000", "11000", "1110
+ 141              		.loc 1 26 0
+ 142 0008 3A1C     		mov	r2, r7
+ 143 000a 3432     		add	r2, r2, #52
+ 144 000c 594B     		ldr	r3, .L19
+ 145 000e 111C     		mov	r1, r2
+ 146 0010 1A1C     		mov	r2, r3
+ 147 0012 6023     		mov	r3, #96
+ 148 0014 081C     		mov	r0, r1
+ 149 0016 111C     		mov	r1, r2
+ 150 0018 1A1C     		mov	r2, r3
+ 151 001a FFF7FEFF 		bl	memcpy
   27:../src/main.c **** 	int i=0;
- 148              		.loc 1 27 0
- 149 001e 0023     		mov	r3, #0
- 150 0020 8420     		mov	r0, #132
- 151 0022 C019     		add	r0, r0, r7
- 152 0024 0360     		str	r3, [r0]
+ 152              		.loc 1 27 0
+ 153 001e 0023     		mov	r3, #0
+ 154 0020 A420     		mov	r0, #164
+ 155 0022 C019     		add	r0, r0, r7
+ 156 0024 0360     		str	r3, [r0]
   28:../src/main.c **** 	char* digitArray[10];
   29:../src/main.c **** 	while(fibNum >0)
- 153              		.loc 1 29 0
- 154 0026 68E0     		b	.L9
- 155              	.L14:
- 156              	.LBB2:
+ 157              		.loc 1 29 0
+ 158 0026 29E0     		b	.L9
+ 159              	.L12:
+ 160              	.LBB2:
   30:../src/main.c **** 	{
   31:../src/main.c **** 		int digit = fibNum % 16;
- 157              		.loc 1 31 0
- 158 0028 7A68     		ldr	r2, [r7, #4]
- 159 002a 6A4B     		ldr	r3, .L20+4
- 160 002c 1340     		and	r3, r2
- 161 002e 04D5     		bpl	.L10
- 162 0030 013B     		sub	r3, r3, #1
- 163 0032 1022     		mov	r2, #16
- 164 0034 5242     		neg	r2, r2
- 165 0036 1343     		orr	r3, r2
- 166 0038 0133     		add	r3, r3, #1
- 167              	.L10:
- 168 003a FB67     		str	r3, [r7, #124]
-  32:../src/main.c **** 		if (digit >= 10)
- 169              		.loc 1 32 0
- 170 003c FB6F     		ldr	r3, [r7, #124]
- 171 003e 092B     		cmp	r3, #9
- 172 0040 3FDD     		ble	.L11
- 173              	.LBB3:
-  33:../src/main.c **** 		{
-  34:../src/main.c **** 			int digit1 = digit % 10;
- 174              		.loc 1 34 0
- 175 0042 FB6F     		ldr	r3, [r7, #124]
- 176 0044 181C     		mov	r0, r3
- 177 0046 0A21     		mov	r1, #10
- 178 0048 FFF7FEFF 		bl	__aeabi_idivmod
- 179 004c 0B1C     		mov	r3, r1
- 180 004e BB67     		str	r3, [r7, #120]
-  35:../src/main.c **** 			int digit2 = (digit/10)%10;
- 181              		.loc 1 35 0
- 182 0050 FB6F     		ldr	r3, [r7, #124]
- 183 0052 181C     		mov	r0, r3
- 184 0054 0A21     		mov	r1, #10
- 185 0056 FFF7FEFF 		bl	__aeabi_idiv
- 186 005a 031C     		mov	r3, r0
- 187 005c 181C     		mov	r0, r3
- 188 005e 0A21     		mov	r1, #10
- 189 0060 FFF7FEFF 		bl	__aeabi_idivmod
- 190 0064 0B1C     		mov	r3, r1
- 191 0066 7B67     		str	r3, [r7, #116]
-  36:../src/main.c **** 			digitArray[i] = morse[digit2];
- 192              		.loc 1 36 0
- 193 0068 7A6F     		ldr	r2, [r7, #116]
- 194 006a 131C     		mov	r3, r2
- 195 006c 5B00     		lsl	r3, r3, #1
- 196 006e 9B18     		add	r3, r3, r2
- 197 0070 5B00     		lsl	r3, r3, #1
- 198 0072 3A1C     		mov	r2, r7
- 199 0074 3432     		add	r2, r2, #52
- 200 0076 D118     		add	r1, r2, r3
- 201 0078 3B1C     		mov	r3, r7
- 202 007a 0C33     		add	r3, r3, #12
- 203 007c 8420     		mov	r0, #132
- 204 007e C019     		add	r0, r0, r7
- 205 0080 0268     		ldr	r2, [r0]
- 206 0082 9200     		lsl	r2, r2, #2
- 207 0084 D150     		str	r1, [r2, r3]
-  37:../src/main.c **** 			i++;
- 208              		.loc 1 37 0
- 209 0086 8421     		mov	r1, #132
- 210 0088 C919     		add	r1, r1, r7
- 211 008a 0B68     		ldr	r3, [r1]
- 212 008c 0133     		add	r3, r3, #1
- 213 008e 8422     		mov	r2, #132
- 214 0090 D219     		add	r2, r2, r7
- 215 0092 1360     		str	r3, [r2]
-  38:../src/main.c **** 			digitArray[i] = morse[digit1];
- 216              		.loc 1 38 0
- 217 0094 BA6F     		ldr	r2, [r7, #120]
- 218 0096 131C     		mov	r3, r2
- 219 0098 5B00     		lsl	r3, r3, #1
- 220 009a 9B18     		add	r3, r3, r2
- 221 009c 5B00     		lsl	r3, r3, #1
- 222 009e 3A1C     		mov	r2, r7
- 223 00a0 3432     		add	r2, r2, #52
- 224 00a2 D118     		add	r1, r2, r3
- 225 00a4 3B1C     		mov	r3, r7
- 226 00a6 0C33     		add	r3, r3, #12
- 227 00a8 8420     		mov	r0, #132
- 228 00aa C019     		add	r0, r0, r7
- 229 00ac 0268     		ldr	r2, [r0]
- 230 00ae 9200     		lsl	r2, r2, #2
- 231 00b0 D150     		str	r1, [r2, r3]
-  39:../src/main.c **** 			i++;
- 232              		.loc 1 39 0
- 233 00b2 8421     		mov	r1, #132
- 234 00b4 C919     		add	r1, r1, r7
- 235 00b6 0B68     		ldr	r3, [r1]
- 236 00b8 0133     		add	r3, r3, #1
- 237 00ba 8422     		mov	r2, #132
- 238 00bc D219     		add	r2, r2, r7
- 239 00be 1360     		str	r3, [r2]
- 240 00c0 15E0     		b	.L12
- 241              	.L11:
- 242              	.LBE3:
-  40:../src/main.c **** 		}else{
-  41:../src/main.c **** 			digitArray[i] = morse[digit];
- 243              		.loc 1 41 0
- 244 00c2 FA6F     		ldr	r2, [r7, #124]
- 245 00c4 131C     		mov	r3, r2
- 246 00c6 5B00     		lsl	r3, r3, #1
- 247 00c8 9B18     		add	r3, r3, r2
- 248 00ca 5B00     		lsl	r3, r3, #1
- 249 00cc 3A1C     		mov	r2, r7
- 250 00ce 3432     		add	r2, r2, #52
- 251 00d0 D118     		add	r1, r2, r3
- 252 00d2 3B1C     		mov	r3, r7
- 253 00d4 0C33     		add	r3, r3, #12
- 254 00d6 8420     		mov	r0, #132
- 255 00d8 C019     		add	r0, r0, r7
- 256 00da 0268     		ldr	r2, [r0]
- 257 00dc 9200     		lsl	r2, r2, #2
- 258 00de D150     		str	r1, [r2, r3]
-  42:../src/main.c **** 			i++;
- 259              		.loc 1 42 0
- 260 00e0 8421     		mov	r1, #132
- 261 00e2 C919     		add	r1, r1, r7
- 262 00e4 0B68     		ldr	r3, [r1]
- 263 00e6 0133     		add	r3, r3, #1
- 264 00e8 8422     		mov	r2, #132
- 265 00ea D219     		add	r2, r2, r7
- 266 00ec 1360     		str	r3, [r2]
- 267              	.L12:
-  43:../src/main.c **** 		}
-  44:../src/main.c **** 
-  45:../src/main.c **** 		fibNum /= 16;
- 268              		.loc 1 45 0
- 269 00ee 7B68     		ldr	r3, [r7, #4]
- 270 00f0 002B     		cmp	r3, #0
- 271 00f2 00DA     		bge	.L13
- 272 00f4 0F33     		add	r3, r3, #15
- 273              	.L13:
- 274 00f6 1B11     		asr	r3, r3, #4
- 275 00f8 7B60     		str	r3, [r7, #4]
- 276              	.L9:
- 277              	.LBE2:
+ 161              		.loc 1 31 0
+ 162 0028 7A68     		ldr	r2, [r7, #4]
+ 163 002a 534B     		ldr	r3, .L19+4
+ 164 002c 1340     		and	r3, r2
+ 165 002e 04D5     		bpl	.L10
+ 166 0030 013B     		sub	r3, r3, #1
+ 167 0032 1022     		mov	r2, #16
+ 168 0034 5242     		neg	r2, r2
+ 169 0036 1343     		orr	r3, r2
+ 170 0038 0133     		add	r3, r3, #1
+ 171              	.L10:
+ 172 003a 9821     		mov	r1, #152
+ 173 003c C919     		add	r1, r1, r7
+ 174 003e 0B60     		str	r3, [r1]
+  32:../src/main.c **** 		digitArray[i] = morse[digit];
+ 175              		.loc 1 32 0
+ 176 0040 9823     		mov	r3, #152
+ 177 0042 DB19     		add	r3, r3, r7
+ 178 0044 1A68     		ldr	r2, [r3]
+ 179 0046 131C     		mov	r3, r2
+ 180 0048 5B00     		lsl	r3, r3, #1
+ 181 004a 9B18     		add	r3, r3, r2
+ 182 004c 5B00     		lsl	r3, r3, #1
+ 183 004e 3A1C     		mov	r2, r7
+ 184 0050 3432     		add	r2, r2, #52
+ 185 0052 D118     		add	r1, r2, r3
+ 186 0054 3B1C     		mov	r3, r7
+ 187 0056 0C33     		add	r3, r3, #12
+ 188 0058 A420     		mov	r0, #164
+ 189 005a C019     		add	r0, r0, r7
+ 190 005c 0268     		ldr	r2, [r0]
+ 191 005e 9200     		lsl	r2, r2, #2
+ 192 0060 D150     		str	r1, [r2, r3]
+  33:../src/main.c **** 		i++;
+ 193              		.loc 1 33 0
+ 194 0062 A421     		mov	r1, #164
+ 195 0064 C919     		add	r1, r1, r7
+ 196 0066 0B68     		ldr	r3, [r1]
+ 197 0068 0133     		add	r3, r3, #1
+ 198 006a A422     		mov	r2, #164
+ 199 006c D219     		add	r2, r2, r7
+ 200 006e 1360     		str	r3, [r2]
+  34:../src/main.c **** 		fibNum /= 16;
+ 201              		.loc 1 34 0
+ 202 0070 7B68     		ldr	r3, [r7, #4]
+ 203 0072 002B     		cmp	r3, #0
+ 204 0074 00DA     		bge	.L11
+ 205 0076 0F33     		add	r3, r3, #15
+ 206              	.L11:
+ 207 0078 1B11     		asr	r3, r3, #4
+ 208 007a 7B60     		str	r3, [r7, #4]
+ 209              	.L9:
+ 210              	.LBE2:
   29:../src/main.c **** 	while(fibNum >0)
- 278              		.loc 1 29 0 discriminator 1
- 279 00fa 7B68     		ldr	r3, [r7, #4]
- 280 00fc 002B     		cmp	r3, #0
- 281 00fe 93DC     		bgt	.L14
-  46:../src/main.c **** 	}
-  47:../src/main.c **** 	int j=i-1;
- 282              		.loc 1 47 0
- 283 0100 8420     		mov	r0, #132
- 284 0102 C019     		add	r0, r0, r7
- 285 0104 0368     		ldr	r3, [r0]
- 286 0106 013B     		sub	r3, r3, #1
- 287 0108 8021     		mov	r1, #128
- 288 010a C919     		add	r1, r1, r7
- 289 010c 0B60     		str	r3, [r1]
-  48:../src/main.c **** 	for(j=i-1; j<10; j--){
- 290              		.loc 1 48 0
- 291 010e 8422     		mov	r2, #132
- 292 0110 D219     		add	r2, r2, r7
- 293 0112 1368     		ldr	r3, [r2]
- 294 0114 013B     		sub	r3, r3, #1
- 295 0116 8020     		mov	r0, #128
- 296 0118 C019     		add	r0, r0, r7
- 297 011a 0360     		str	r3, [r0]
- 298 011c 4DE0     		b	.L15
- 299              	.L19:
- 300              	.LBB4:
-  49:../src/main.c **** 		int blinkNum = 0;
- 301              		.loc 1 49 0
- 302 011e 0023     		mov	r3, #0
- 303 0120 3B67     		str	r3, [r7, #112]
-  50:../src/main.c **** 		while(blinkNum<5){
- 304              		.loc 1 50 0
- 305 0122 40E0     		b	.L16
- 306              	.L18:
-  51:../src/main.c **** 			if(digitArray[j][blinkNum]==0){
- 307              		.loc 1 51 0
- 308 0124 3B1C     		mov	r3, r7
- 309 0126 0C33     		add	r3, r3, #12
- 310 0128 8021     		mov	r1, #128
- 311 012a C919     		add	r1, r1, r7
- 312 012c 0A68     		ldr	r2, [r1]
- 313 012e 9200     		lsl	r2, r2, #2
- 314 0130 D258     		ldr	r2, [r2, r3]
- 315 0132 3B6F     		ldr	r3, [r7, #112]
- 316 0134 D318     		add	r3, r2, r3
- 317 0136 1B78     		ldrb	r3, [r3]
- 318 0138 002B     		cmp	r3, #0
- 319 013a 14D1     		bne	.L17
-  52:../src/main.c **** 				//blink short
-  53:../src/main.c **** 				GPIOSetValue( 0, 7, 1 );
- 320              		.loc 1 53 0
- 321 013c 0020     		mov	r0, #0
- 322 013e 0721     		mov	r1, #7
- 323 0140 0122     		mov	r2, #1
- 324 0142 FFF7FEFF 		bl	GPIOSetValue
-  54:../src/main.c **** 				_delay_ms (500);
- 325              		.loc 1 54 0
- 326 0146 FA23     		mov	r3, #250
- 327 0148 5B00     		lsl	r3, r3, #1
- 328 014a 181C     		mov	r0, r3
- 329 014c FFF7FEFF 		bl	_delay_ms
-  55:../src/main.c **** 				GPIOSetValue( 0, 7, 0 );
- 330              		.loc 1 55 0
- 331 0150 0020     		mov	r0, #0
- 332 0152 0721     		mov	r1, #7
- 333 0154 0022     		mov	r2, #0
- 334 0156 FFF7FEFF 		bl	GPIOSetValue
-  56:../src/main.c **** 				_delay_ms (500);
- 335              		.loc 1 56 0
- 336 015a FA23     		mov	r3, #250
- 337 015c 5B00     		lsl	r3, r3, #1
- 338 015e 181C     		mov	r0, r3
- 339 0160 FFF7FEFF 		bl	_delay_ms
- 340 0164 1FE0     		b	.L16
- 341              	.L17:
-  57:../src/main.c **** 			}else if(digitArray[j][blinkNum]==1){
- 342              		.loc 1 57 0
- 343 0166 3B1C     		mov	r3, r7
- 344 0168 0C33     		add	r3, r3, #12
- 345 016a 8020     		mov	r0, #128
- 346 016c C019     		add	r0, r0, r7
- 347 016e 0268     		ldr	r2, [r0]
- 348 0170 9200     		lsl	r2, r2, #2
- 349 0172 D258     		ldr	r2, [r2, r3]
- 350 0174 3B6F     		ldr	r3, [r7, #112]
- 351 0176 D318     		add	r3, r2, r3
- 352 0178 1B78     		ldrb	r3, [r3]
- 353 017a 012B     		cmp	r3, #1
- 354 017c 13D1     		bne	.L16
-  58:../src/main.c **** 				//blink long
-  59:../src/main.c **** 				GPIOSetValue( 0, 7, 1 );
- 355              		.loc 1 59 0
- 356 017e 0020     		mov	r0, #0
- 357 0180 0721     		mov	r1, #7
- 358 0182 0122     		mov	r2, #1
- 359 0184 FFF7FEFF 		bl	GPIOSetValue
-  60:../src/main.c **** 				_delay_ms (1000);
- 360              		.loc 1 60 0
- 361 0188 FA23     		mov	r3, #250
- 362 018a 9B00     		lsl	r3, r3, #2
- 363 018c 181C     		mov	r0, r3
- 364 018e FFF7FEFF 		bl	_delay_ms
-  61:../src/main.c **** 				GPIOSetValue( 0, 7, 0 );
- 365              		.loc 1 61 0
- 366 0192 0020     		mov	r0, #0
- 367 0194 0721     		mov	r1, #7
- 368 0196 0022     		mov	r2, #0
- 369 0198 FFF7FEFF 		bl	GPIOSetValue
-  62:../src/main.c **** 				_delay_ms (500);
- 370              		.loc 1 62 0
- 371 019c FA23     		mov	r3, #250
- 372 019e 5B00     		lsl	r3, r3, #1
- 373 01a0 181C     		mov	r0, r3
- 374 01a2 FFF7FEFF 		bl	_delay_ms
- 375              	.L16:
-  50:../src/main.c **** 		while(blinkNum<5){
- 376              		.loc 1 50 0 discriminator 1
- 377 01a6 3B6F     		ldr	r3, [r7, #112]
- 378 01a8 042B     		cmp	r3, #4
- 379 01aa BBDD     		ble	.L18
- 380              	.LBE4:
-  48:../src/main.c **** 	for(j=i-1; j<10; j--){
- 381              		.loc 1 48 0
- 382 01ac 8021     		mov	r1, #128
- 383 01ae C919     		add	r1, r1, r7
- 384 01b0 0B68     		ldr	r3, [r1]
- 385 01b2 013B     		sub	r3, r3, #1
- 386 01b4 8022     		mov	r2, #128
- 387 01b6 D219     		add	r2, r2, r7
- 388 01b8 1360     		str	r3, [r2]
- 389              	.L15:
-  48:../src/main.c **** 	for(j=i-1; j<10; j--){
- 390              		.loc 1 48 0 is_stmt 0 discriminator 1
- 391 01ba 8020     		mov	r0, #128
- 392 01bc C019     		add	r0, r0, r7
- 393 01be 0368     		ldr	r3, [r0]
- 394 01c0 092B     		cmp	r3, #9
- 395 01c2 ACDD     		ble	.L19
-  63:../src/main.c **** 			}
-  64:../src/main.c **** 		}
-  65:../src/main.c **** 	}
-  66:../src/main.c **** 	return 1;
- 396              		.loc 1 66 0 is_stmt 1
- 397 01c4 0123     		mov	r3, #1
-  67:../src/main.c **** }
- 398              		.loc 1 67 0
- 399 01c6 181C     		mov	r0, r3
- 400 01c8 BD46     		mov	sp, r7
- 401 01ca 22B0     		add	sp, sp, #136
- 402              		@ sp needed for prologue
- 403 01cc 80BD     		pop	{r7, pc}
- 404              	.L21:
- 405 01ce C046     		.align	2
- 406              	.L20:
- 407 01d0 10000000 		.word	.LC0
- 408 01d4 0F000080 		.word	-2147483633
- 409              		.cfi_endproc
- 410              	.LFE21:
- 412              		.section	.text.main,"ax",%progbits
- 413              		.align	2
- 414              		.global	main
- 415              		.code	16
- 416              		.thumb_func
- 418              	main:
- 419              	.LFB22:
-  68:../src/main.c **** 
-  69:../src/main.c **** int main(void) {
- 420              		.loc 1 69 0
- 421              		.cfi_startproc
- 422 0000 80B5     		push	{r7, lr}
- 423              	.LCFI6:
- 424              		.cfi_def_cfa_offset 8
- 425              		.cfi_offset 7, -8
- 426              		.cfi_offset 14, -4
- 427 0002 82B0     		sub	sp, sp, #8
- 428              	.LCFI7:
- 429              		.cfi_def_cfa_offset 16
- 430 0004 00AF     		add	r7, sp, #0
- 431              	.LCFI8:
- 432              		.cfi_def_cfa_register 7
-  70:../src/main.c **** 	  GPIOInit();
- 433              		.loc 1 70 0
- 434 0006 FFF7FEFF 		bl	GPIOInit
-  71:../src/main.c **** 	  /* Set LED port pin to output */
-  72:../src/main.c **** 	  GPIOSetDir( 0, 7, 1 );
- 435              		.loc 1 72 0
- 436 000a 0020     		mov	r0, #0
- 437 000c 0721     		mov	r1, #7
- 438 000e 0122     		mov	r2, #1
- 439 0010 FFF7FEFF 		bl	GPIOSetDir
-  73:../src/main.c **** 
-  74:../src/main.c **** 	int i=1;
- 440              		.loc 1 74 0
- 441 0014 0123     		mov	r3, #1
- 442 0016 7B60     		str	r3, [r7, #4]
-  75:../src/main.c **** 	int fibNum;
-  76:../src/main.c **** 	for(i=1; i <=20; i++){
- 443              		.loc 1 76 0
- 444 0018 0123     		mov	r3, #1
- 445 001a 7B60     		str	r3, [r7, #4]
- 446 001c 0CE0     		b	.L23
- 447              	.L24:
-  77:../src/main.c **** 		fibNum = fibonacci(i);
- 448              		.loc 1 77 0 discriminator 2
- 449 001e 7B68     		ldr	r3, [r7, #4]
- 450 0020 181C     		mov	r0, r3
- 451 0022 FFF7FEFF 		bl	fibonacci
- 452 0026 031C     		mov	r3, r0
- 453 0028 3B60     		str	r3, [r7]
-  78:../src/main.c **** 		translateFib(fibNum);
- 454              		.loc 1 78 0 discriminator 2
- 455 002a 3B68     		ldr	r3, [r7]
- 456 002c 181C     		mov	r0, r3
- 457 002e FFF7FEFF 		bl	translateFib
-  76:../src/main.c **** 	for(i=1; i <=20; i++){
- 458              		.loc 1 76 0 discriminator 2
- 459 0032 7B68     		ldr	r3, [r7, #4]
- 460 0034 0133     		add	r3, r3, #1
- 461 0036 7B60     		str	r3, [r7, #4]
- 462              	.L23:
-  76:../src/main.c **** 	for(i=1; i <=20; i++){
- 463              		.loc 1 76 0 is_stmt 0 discriminator 1
- 464 0038 7B68     		ldr	r3, [r7, #4]
- 465 003a 142B     		cmp	r3, #20
- 466 003c EFDD     		ble	.L24
-  79:../src/main.c **** 	}
-  80:../src/main.c **** }
- 467              		.loc 1 80 0 is_stmt 1
- 468 003e 181C     		mov	r0, r3
- 469 0040 BD46     		mov	sp, r7
- 470 0042 02B0     		add	sp, sp, #8
- 471              		@ sp needed for prologue
- 472 0044 80BD     		pop	{r7, pc}
- 473              		.cfi_endproc
- 474              	.LFE22:
- 476 0046 C046     		.text
- 477              	.Letext0:
- 478              		.file 2 "/Applications/lpcxpresso_6.1.2_177/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/..
- 479              		.file 3 "/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis/LPC11xx.h"
- 480              		.file 4 "/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver/gpio.h"
+ 211              		.loc 1 29 0 discriminator 1
+ 212 007c 7B68     		ldr	r3, [r7, #4]
+ 213 007e 002B     		cmp	r3, #0
+ 214 0080 D2DC     		bgt	.L12
+  35:../src/main.c **** 	}
+  36:../src/main.c **** 	int j=i-1;
+ 215              		.loc 1 36 0
+ 216 0082 A420     		mov	r0, #164
+ 217 0084 C019     		add	r0, r0, r7
+ 218 0086 0368     		ldr	r3, [r0]
+ 219 0088 013B     		sub	r3, r3, #1
+ 220 008a A021     		mov	r1, #160
+ 221 008c C919     		add	r1, r1, r7
+ 222 008e 0B60     		str	r3, [r1]
+  37:../src/main.c **** 	for(j=i-1; j>=0; j--){
+ 223              		.loc 1 37 0
+ 224 0090 A422     		mov	r2, #164
+ 225 0092 D219     		add	r2, r2, r7
+ 226 0094 1368     		ldr	r3, [r2]
+ 227 0096 013B     		sub	r3, r3, #1
+ 228 0098 A020     		mov	r0, #160
+ 229 009a C019     		add	r0, r0, r7
+ 230 009c 0360     		str	r3, [r0]
+ 231 009e 5FE0     		b	.L13
+ 232              	.L18:
+ 233              	.LBB3:
+  38:../src/main.c **** 		int blinkNum = 0;
+ 234              		.loc 1 38 0
+ 235 00a0 0023     		mov	r3, #0
+ 236 00a2 9C21     		mov	r1, #156
+ 237 00a4 C919     		add	r1, r1, r7
+ 238 00a6 0B60     		str	r3, [r1]
+  39:../src/main.c **** 		while(blinkNum<6){
+ 239              		.loc 1 39 0
+ 240 00a8 49E0     		b	.L14
+ 241              	.L17:
+ 242              	.LBB4:
+  40:../src/main.c **** 			int current = digitArray[j][blinkNum];
+ 243              		.loc 1 40 0
+ 244 00aa 3B1C     		mov	r3, r7
+ 245 00ac 0C33     		add	r3, r3, #12
+ 246 00ae A020     		mov	r0, #160
+ 247 00b0 C019     		add	r0, r0, r7
+ 248 00b2 0268     		ldr	r2, [r0]
+ 249 00b4 9200     		lsl	r2, r2, #2
+ 250 00b6 D258     		ldr	r2, [r2, r3]
+ 251 00b8 9C21     		mov	r1, #156
+ 252 00ba C919     		add	r1, r1, r7
+ 253 00bc 0B68     		ldr	r3, [r1]
+ 254 00be D318     		add	r3, r2, r3
+ 255 00c0 1B78     		ldrb	r3, [r3]
+ 256 00c2 9422     		mov	r2, #148
+ 257 00c4 D219     		add	r2, r2, r7
+ 258 00c6 1360     		str	r3, [r2]
+  41:../src/main.c **** 			current -=48;
+ 259              		.loc 1 41 0
+ 260 00c8 9420     		mov	r0, #148
+ 261 00ca C019     		add	r0, r0, r7
+ 262 00cc 0368     		ldr	r3, [r0]
+ 263 00ce 303B     		sub	r3, r3, #48
+ 264 00d0 9421     		mov	r1, #148
+ 265 00d2 C919     		add	r1, r1, r7
+ 266 00d4 0B60     		str	r3, [r1]
+  42:../src/main.c **** 			if(current==0){
+ 267              		.loc 1 42 0
+ 268 00d6 9422     		mov	r2, #148
+ 269 00d8 D219     		add	r2, r2, r7
+ 270 00da 1368     		ldr	r3, [r2]
+ 271 00dc 002B     		cmp	r3, #0
+ 272 00de 10D1     		bne	.L15
+  43:../src/main.c **** 				//blink short
+  44:../src/main.c **** 				GPIOSetValue( 0, 7, 1 );
+ 273              		.loc 1 44 0
+ 274 00e0 0020     		mov	r0, #0
+ 275 00e2 0721     		mov	r1, #7
+ 276 00e4 0122     		mov	r2, #1
+ 277 00e6 FFF7FEFF 		bl	GPIOSetValue
+  45:../src/main.c **** 				_delay_ms (150);
+ 278              		.loc 1 45 0
+ 279 00ea 9620     		mov	r0, #150
+ 280 00ec FFF7FEFF 		bl	_delay_ms
+  46:../src/main.c **** 				GPIOSetValue( 0, 7, 0 );
+ 281              		.loc 1 46 0
+ 282 00f0 0020     		mov	r0, #0
+ 283 00f2 0721     		mov	r1, #7
+ 284 00f4 0022     		mov	r2, #0
+ 285 00f6 FFF7FEFF 		bl	GPIOSetValue
+  47:../src/main.c **** 				_delay_ms (50);
+ 286              		.loc 1 47 0
+ 287 00fa 3220     		mov	r0, #50
+ 288 00fc FFF7FEFF 		bl	_delay_ms
+ 289 0100 16E0     		b	.L16
+ 290              	.L15:
+  48:../src/main.c **** 			}else if(current==1){
+ 291              		.loc 1 48 0
+ 292 0102 9420     		mov	r0, #148
+ 293 0104 C019     		add	r0, r0, r7
+ 294 0106 0368     		ldr	r3, [r0]
+ 295 0108 012B     		cmp	r3, #1
+ 296 010a 11D1     		bne	.L16
+  49:../src/main.c **** 				//blink long
+  50:../src/main.c **** 				GPIOSetValue( 0, 7, 1 );
+ 297              		.loc 1 50 0
+ 298 010c 0020     		mov	r0, #0
+ 299 010e 0721     		mov	r1, #7
+ 300 0110 0122     		mov	r2, #1
+ 301 0112 FFF7FEFF 		bl	GPIOSetValue
+  51:../src/main.c **** 				_delay_ms (500);
+ 302              		.loc 1 51 0
+ 303 0116 FA23     		mov	r3, #250
+ 304 0118 5B00     		lsl	r3, r3, #1
+ 305 011a 181C     		mov	r0, r3
+ 306 011c FFF7FEFF 		bl	_delay_ms
+  52:../src/main.c **** 				GPIOSetValue( 0, 7, 0 );
+ 307              		.loc 1 52 0
+ 308 0120 0020     		mov	r0, #0
+ 309 0122 0721     		mov	r1, #7
+ 310 0124 0022     		mov	r2, #0
+ 311 0126 FFF7FEFF 		bl	GPIOSetValue
+  53:../src/main.c **** 				_delay_ms (50);
+ 312              		.loc 1 53 0
+ 313 012a 3220     		mov	r0, #50
+ 314 012c FFF7FEFF 		bl	_delay_ms
+ 315              	.L16:
+  54:../src/main.c **** 			}
+  55:../src/main.c **** 			blinkNum++;
+ 316              		.loc 1 55 0
+ 317 0130 9C21     		mov	r1, #156
+ 318 0132 C919     		add	r1, r1, r7
+ 319 0134 0B68     		ldr	r3, [r1]
+ 320 0136 0133     		add	r3, r3, #1
+ 321 0138 9C22     		mov	r2, #156
+ 322 013a D219     		add	r2, r2, r7
+ 323 013c 1360     		str	r3, [r2]
+ 324              	.L14:
+ 325              	.LBE4:
+  39:../src/main.c **** 		while(blinkNum<6){
+ 326              		.loc 1 39 0 discriminator 1
+ 327 013e 9C20     		mov	r0, #156
+ 328 0140 C019     		add	r0, r0, r7
+ 329 0142 0368     		ldr	r3, [r0]
+ 330 0144 052B     		cmp	r3, #5
+ 331 0146 B0DD     		ble	.L17
+  56:../src/main.c **** 		}
+  57:../src/main.c **** 		_delay_ms (1000);
+ 332              		.loc 1 57 0
+ 333 0148 FA23     		mov	r3, #250
+ 334 014a 9B00     		lsl	r3, r3, #2
+ 335 014c 181C     		mov	r0, r3
+ 336 014e FFF7FEFF 		bl	_delay_ms
+ 337              	.LBE3:
+  37:../src/main.c **** 	for(j=i-1; j>=0; j--){
+ 338              		.loc 1 37 0
+ 339 0152 A021     		mov	r1, #160
+ 340 0154 C919     		add	r1, r1, r7
+ 341 0156 0B68     		ldr	r3, [r1]
+ 342 0158 013B     		sub	r3, r3, #1
+ 343 015a A022     		mov	r2, #160
+ 344 015c D219     		add	r2, r2, r7
+ 345 015e 1360     		str	r3, [r2]
+ 346              	.L13:
+  37:../src/main.c **** 	for(j=i-1; j>=0; j--){
+ 347              		.loc 1 37 0 is_stmt 0 discriminator 1
+ 348 0160 A020     		mov	r0, #160
+ 349 0162 C019     		add	r0, r0, r7
+ 350 0164 0368     		ldr	r3, [r0]
+ 351 0166 002B     		cmp	r3, #0
+ 352 0168 9ADA     		bge	.L18
+  58:../src/main.c **** 	}
+  59:../src/main.c **** 	return 1;
+ 353              		.loc 1 59 0 is_stmt 1
+ 354 016a 0123     		mov	r3, #1
+  60:../src/main.c **** }
+ 355              		.loc 1 60 0
+ 356 016c 181C     		mov	r0, r3
+ 357 016e BD46     		mov	sp, r7
+ 358 0170 2AB0     		add	sp, sp, #168
+ 359              		@ sp needed for prologue
+ 360 0172 80BD     		pop	{r7, pc}
+ 361              	.L20:
+ 362              		.align	2
+ 363              	.L19:
+ 364 0174 10000000 		.word	.LC0
+ 365 0178 0F000080 		.word	-2147483633
+ 366              		.cfi_endproc
+ 367              	.LFE21:
+ 369              		.section	.text.main,"ax",%progbits
+ 370              		.align	2
+ 371              		.global	main
+ 372              		.code	16
+ 373              		.thumb_func
+ 375              	main:
+ 376              	.LFB22:
+  61:../src/main.c **** 
+  62:../src/main.c **** int main(void) {
+ 377              		.loc 1 62 0
+ 378              		.cfi_startproc
+ 379 0000 80B5     		push	{r7, lr}
+ 380              	.LCFI6:
+ 381              		.cfi_def_cfa_offset 8
+ 382              		.cfi_offset 7, -8
+ 383              		.cfi_offset 14, -4
+ 384 0002 82B0     		sub	sp, sp, #8
+ 385              	.LCFI7:
+ 386              		.cfi_def_cfa_offset 16
+ 387 0004 00AF     		add	r7, sp, #0
+ 388              	.LCFI8:
+ 389              		.cfi_def_cfa_register 7
+  63:../src/main.c **** 	  GPIOInit();
+ 390              		.loc 1 63 0
+ 391 0006 FFF7FEFF 		bl	GPIOInit
+  64:../src/main.c **** 	  /* Set LED port pin to output */
+  65:../src/main.c **** 	  GPIOSetDir( 0, 7, 1 );
+ 392              		.loc 1 65 0
+ 393 000a 0020     		mov	r0, #0
+ 394 000c 0721     		mov	r1, #7
+ 395 000e 0122     		mov	r2, #1
+ 396 0010 FFF7FEFF 		bl	GPIOSetDir
+  66:../src/main.c **** 
+  67:../src/main.c **** 	int i=1;
+ 397              		.loc 1 67 0
+ 398 0014 0123     		mov	r3, #1
+ 399 0016 7B60     		str	r3, [r7, #4]
+  68:../src/main.c **** 	int fibNum;
+  69:../src/main.c **** 	for(i=1; i <=20; i++){
+ 400              		.loc 1 69 0
+ 401 0018 0123     		mov	r3, #1
+ 402 001a 7B60     		str	r3, [r7, #4]
+ 403 001c 0CE0     		b	.L22
+ 404              	.L23:
+  70:../src/main.c **** 		fibNum = fibonacci(i);
+ 405              		.loc 1 70 0 discriminator 2
+ 406 001e 7B68     		ldr	r3, [r7, #4]
+ 407 0020 181C     		mov	r0, r3
+ 408 0022 FFF7FEFF 		bl	fibonacci
+ 409 0026 031C     		mov	r3, r0
+ 410 0028 3B60     		str	r3, [r7]
+  71:../src/main.c **** 		translateFib(fibNum);
+ 411              		.loc 1 71 0 discriminator 2
+ 412 002a 3B68     		ldr	r3, [r7]
+ 413 002c 181C     		mov	r0, r3
+ 414 002e FFF7FEFF 		bl	translateFib
+  69:../src/main.c **** 	for(i=1; i <=20; i++){
+ 415              		.loc 1 69 0 discriminator 2
+ 416 0032 7B68     		ldr	r3, [r7, #4]
+ 417 0034 0133     		add	r3, r3, #1
+ 418 0036 7B60     		str	r3, [r7, #4]
+ 419              	.L22:
+  69:../src/main.c **** 	for(i=1; i <=20; i++){
+ 420              		.loc 1 69 0 is_stmt 0 discriminator 1
+ 421 0038 7B68     		ldr	r3, [r7, #4]
+ 422 003a 142B     		cmp	r3, #20
+ 423 003c EFDD     		ble	.L23
+  72:../src/main.c **** 	}
+  73:../src/main.c **** }
+ 424              		.loc 1 73 0 is_stmt 1
+ 425 003e 181C     		mov	r0, r3
+ 426 0040 BD46     		mov	sp, r7
+ 427 0042 02B0     		add	sp, sp, #8
+ 428              		@ sp needed for prologue
+ 429 0044 80BD     		pop	{r7, pc}
+ 430              		.cfi_endproc
+ 431              	.LFE22:
+ 433 0046 C046     		.text
+ 434              	.Letext0:
+ 435              		.file 2 "/Applications/lpcxpresso_6.1.2_177/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/..
+ 436              		.file 3 "/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cms
+ 437              		.file 4 "/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/dri
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:18     .rodata:0000000000000000 $d
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:21     .rodata:0000000000000000 LPC_GPIO
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:27     .text._delay_ms:0000000000000000 $t
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:32     .text._delay_ms:0000000000000000 _delay_ms
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:96     .text._delay_ms:0000000000000048 $d
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:116    .text.translateFib:0000000000000000 $t
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:121    .text.translateFib:0000000000000000 translateFib
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:407    .text.translateFib:00000000000001d0 $d
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:413    .text.main:0000000000000000 $t
-/var/folders/s2/l83cm2y52xd5x_bdz4nkc8tm0000gn/T//ccyd23sV.s:418    .text.main:0000000000000000 main
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:18     .rodata:0000000000000000 $d
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:21     .rodata:0000000000000000 LPC_GPIO
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:27     .text._delay_ms:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:32     .text._delay_ms:0000000000000000 _delay_ms
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:96     .text._delay_ms:0000000000000048 $d
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:120    .text.translateFib:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:125    .text.translateFib:0000000000000000 translateFib
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:364    .text.translateFib:0000000000000174 $d
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:370    .text.main:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccfItwhS.s:375    .text.main:0000000000000000 main
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
-__aeabi_idivmod
-__aeabi_idiv
 memcpy
 GPIOSetValue
 GPIOInit

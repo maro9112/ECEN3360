@@ -25,7 +25,7 @@
   27              		.file 2 "../driver/crp.c"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 crp.c
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccpb5aFw.s:22     .crp:0000000000000000 CRP_WORD
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccpb5aFw.s:19     .crp:0000000000000000 $d
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//cckxmIvs.s:22     .crp:0000000000000000 CRP_WORD
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//cckxmIvs.s:19     .crp:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

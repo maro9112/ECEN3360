@@ -23,45 +23,38 @@ void _delay_ms (uint16_t ms)
 }
 
 int translateFib(int fibNum) {
-	char morse[10][6] = {"11111", "01111", "00111", "00011", "00001", "00000", "10000", "11000", "11100", "11110"};
+	char morse[16][6] = {"11111", "01111", "00111", "00011", "00001", "00000", "10000", "11000", "11100", "11110", "00001", "01000", "01010", "00100", "00000", "00010"};
 	int i=0;
 	char* digitArray[10];
 	while(fibNum >0)
 	{
 		int digit = fibNum % 16;
-		if (digit >= 10)
-		{
-			int digit1 = digit % 10;
-			int digit2 = (digit/10)%10;
-			digitArray[i] = morse[digit2];
-			i++;
-			digitArray[i] = morse[digit1];
-			i++;
-		}else{
-			digitArray[i] = morse[digit];
-			i++;
-		}
-
+		digitArray[i] = morse[digit];
+		i++;
 		fibNum /= 16;
 	}
 	int j=i-1;
-	for(j=i-1; j<10; j--){
+	for(j=i-1; j>=0; j--){
 		int blinkNum = 0;
-		while(blinkNum<5){
-			if(digitArray[j][blinkNum]==0){
+		while(blinkNum<6){
+			int current = digitArray[j][blinkNum];
+			current -=48;
+			if(current==0){
 				//blink short
 				GPIOSetValue( 0, 7, 1 );
-				_delay_ms (500);
+				_delay_ms (150);
 				GPIOSetValue( 0, 7, 0 );
-				_delay_ms (500);
-			}else if(digitArray[j][blinkNum]==1){
+				_delay_ms (50);
+			}else if(current==1){
 				//blink long
 				GPIOSetValue( 0, 7, 1 );
-				_delay_ms (1000);
-				GPIOSetValue( 0, 7, 0 );
 				_delay_ms (500);
+				GPIOSetValue( 0, 7, 0 );
+				_delay_ms (50);
 			}
+			blinkNum++;
 		}
+		_delay_ms (1000);
 	}
 	return 1;
 }

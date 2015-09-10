@@ -835,28 +835,28 @@
  412              		.file 2 "/Applications/lpcxpresso_6.1.2_177/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/..
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 core_cm0.c
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:18     .text.__get_PSP:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:23     .text.__get_PSP:0000000000000000 __get_PSP
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:46     .text.__set_PSP:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:51     .text.__set_PSP:0000000000000000 __set_PSP
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:68     .text.__get_MSP:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:73     .text.__get_MSP:0000000000000000 __get_MSP
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:95     .text.__set_MSP:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:100    .text.__set_MSP:0000000000000000 __set_MSP
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:117    .text.__get_PRIMASK:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:122    .text.__get_PRIMASK:0000000000000000 __get_PRIMASK
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:159    .text.__set_PRIMASK:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:164    .text.__set_PRIMASK:0000000000000000 __set_PRIMASK
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:195    .text.__get_CONTROL:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:200    .text.__get_CONTROL:0000000000000000 __get_CONTROL
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:237    .text.__set_CONTROL:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:242    .text.__set_CONTROL:0000000000000000 __set_CONTROL
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:273    .text.__REV:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:278    .text.__REV:0000000000000000 __REV
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:317    .text.__REV16:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:322    .text.__REV16:0000000000000000 __REV16
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:364    .text.__REVSH:0000000000000000 $t
-/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccJmyPN5.s:369    .text.__REVSH:0000000000000000 __REVSH
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:18     .text.__get_PSP:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:23     .text.__get_PSP:0000000000000000 __get_PSP
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:46     .text.__set_PSP:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:51     .text.__set_PSP:0000000000000000 __set_PSP
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:68     .text.__get_MSP:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:73     .text.__get_MSP:0000000000000000 __get_MSP
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:95     .text.__set_MSP:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:100    .text.__set_MSP:0000000000000000 __set_MSP
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:117    .text.__get_PRIMASK:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:122    .text.__get_PRIMASK:0000000000000000 __get_PRIMASK
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:159    .text.__set_PRIMASK:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:164    .text.__set_PRIMASK:0000000000000000 __set_PRIMASK
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:195    .text.__get_CONTROL:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:200    .text.__get_CONTROL:0000000000000000 __get_CONTROL
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:237    .text.__set_CONTROL:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:242    .text.__set_CONTROL:0000000000000000 __set_CONTROL
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:273    .text.__REV:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:278    .text.__REV:0000000000000000 __REV
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:317    .text.__REV16:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:322    .text.__REV16:0000000000000000 __REV16
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:364    .text.__REVSH:0000000000000000 $t
+/var/folders/8z/dt12xkd563bf9zk7z_2wjk9m0000gn/T//ccGMCYu6.s:369    .text.__REVSH:0000000000000000 __REVSH
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

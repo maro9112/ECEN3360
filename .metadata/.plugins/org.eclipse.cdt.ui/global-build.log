@@ -1,296 +1,85 @@
-14:36:23 **** Incremental Build of configuration Debug for project asm_xample11 ****
+14:03:23 **** Incremental Build of configuration Debug for project asm_xample11 ****
 make all 
 Building file: ../src/main.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'translateFib':
-../src/main.c:41:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
-Finished building: ../src/main.c
- 
-Building file: ../driver/adc.c
-Invoking: MCU C Compiler
-../src/main.c: In function 'main':
-../src/main.c:66:1: warning: control reaches end of non-void function [-Wreturn-type]
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=adc.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/adc.d" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
-Finished building: ../driver/adc.c
- 
-Building file: ../driver/can.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=can.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/can.d" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
-Finished building: ../driver/can.c
- 
-Building file: ../driver/clkconfig.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=clkconfig.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
-Finished building: ../driver/clkconfig.c
- 
-Building file: ../driver/crp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=crp.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/crp.d" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
-Finished building: ../driver/crp.c
- 
-Building file: ../driver/debug_printf.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=debug_printf.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
-Finished building: ../driver/debug_printf.c
- 
-Building file: ../driver/gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=gpio.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
-Finished building: ../driver/gpio.c
- 
-Building file: ../driver/i2c.c
-Invoking: MCU C Compiler
-./src/main.o: In function `translateFib':
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=i2c.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
-Finished building: ../driver/i2c.c
- 
-Building file: ../driver/i2cslave.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=i2cslave.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
-Finished building: ../driver/i2cslave.c
- 
-Building file: ../driver/lpc_swu.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=lpc_swu.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
-Finished building: ../driver/lpc_swu.c
- 
-Building file: ../driver/rs485.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=rs485.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
-Finished building: ../driver/rs485.c
- 
-Building file: ../driver/small_gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=small_gpio.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
-Finished building: ../driver/small_gpio.c
- 
-Building file: ../driver/ssp.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=ssp.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
-Finished building: ../driver/ssp.c
- 
-Building file: ../driver/timer16.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=timer16.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
-Finished building: ../driver/timer16.c
- 
-Building file: ../driver/timer32.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=timer32.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
-Finished building: ../driver/timer32.c
- 
-Building file: ../driver/uart.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=uart.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/uart.d" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
-Finished building: ../driver/uart.c
- 
-Building file: ../driver/wdt.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=wdt.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-Finished building: ../driver/wdt.c
- 
-Building file: ../cmsis/core_cm0.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=core_cm0.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
-Finished building: ../cmsis/core_cm0.c
- 
-Building file: ../cmsis/system_LPC11xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=system_LPC11xx.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
-Finished building: ../cmsis/system_LPC11xx.c
- 
-Building target: asm_xample11.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-16:16:12 **** Build of configuration Debug for project asm_xample11 ****
-make all 
-Building target: asm_xample11.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-./src/main.o: In function `translateFib':
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-16:16:33 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building target: asm_xample11.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-./src/main.o: In function `translateFib':
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-16:17:30 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building target: asm_xample11.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-./src/main.o: In function `translateFib':
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-16:18:03 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building target: asm_xample11.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-./src/main.o: In function `translateFib':
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-16:20:24 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building target: asm_xample11.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-./src/main.o: In function `translateFib':
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-16:21:01 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building target: asm_xample11.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-./src/main.o: In function `translateFib':
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-16:26:11 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building target: asm_xample11.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-./src/main.o: In function `translateFib':
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
-/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-16:38:19 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'translateFib':
 Finished building: ../src/main.c
+../src/main.c:41:14: warning: comparison between pointer and integer [enabled by default]
  
 Building target: asm_xample11.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
-../src/main.c:41:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+../src/main.c:41:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:47:20: warning: comparison between pointer and integer [enabled by default]
+../src/main.c:47:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
 ../src/main.c: In function 'main':
 ../src/main.c:70:1: warning: control reaches end of non-void function [-Wreturn-type]
-./src/main.o: In function `translateFib':
-/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
-/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
-/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
-/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-16:43:28 **** Incremental Build of configuration Debug for project asm_xample11 ****
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1408	      0	     16	   1424	    590	asm_xample11.axf
+ 
+14:04:58 **** Incremental Build of configuration Debug for project asm_xample11 ****
 make all 
 Building file: ../src/main.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'translateFib':
+../src/main.c:41:14: warning: comparison between pointer and integer [enabled by default]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+../src/main.c:41:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:47:20: warning: comparison between pointer and integer [enabled by default]
+../src/main.c:47:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c: In function 'main':
+../src/main.c:70:1: warning: control reaches end of non-void function [-Wreturn-type]
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1408	      0	     16	   1424	    590	asm_xample11.axf
+ 
+14:06:14 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'translateFib':
 Finished building: ../src/main.c
-../src/main.c:53:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+../src/main.c:42:14: warning: comparison between pointer and integer [enabled by default]
  
 Building target: asm_xample11.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1420	      0	     16	   1436	    59c	asm_xample11.axf
+ 
+../src/main.c:42:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:48:20: warning: comparison between pointer and integer [enabled by default]
+../src/main.c:48:20: warning: comparison with string literal results in unspecified behavior [-Waddress]
 ../src/main.c: In function 'main':
-../src/main.c:82:1: warning: control reaches end of non-void function [-Wreturn-type]
-./src/main.o: In function `translateFib':
-/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:53: undefined reference to `sleep'
-/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:55: undefined reference to `sleep'
-/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:59: undefined reference to `sleep'
-/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:61: undefined reference to `sleep'
-collect2: ld returned 1 exit status
-make: *** [asm_xample11.axf] Error 1
-16:46:42 **** Incremental Build of configuration Debug for project asm_xample11 ****
+../src/main.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+14:07:15 **** Incremental Build of configuration Debug for project asm_xample11 ****
 make all 
 Building file: ../src/main.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'translateFib':
-../src/main.c:54:16: error: expected expression before 'uint16_t'
-../src/main.c:55:5: error: expected ';' before 'GPIOSetValue'
-../src/main.c:56:16: error: expected expression before 'uint16_t'
-../src/main.c:57:4: error: expected ';' before '}' token
-../src/main.c:60:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main':
-../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
-make: *** [src/main.o] Error 1
-16:47:05 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'translateFib':
-../src/main.c:55:5: error: expected ';' before 'GPIOSetValue'
-../src/main.c:56:16: error: expected expression before 'uint16_t'
-../src/main.c:57:4: error: expected ';' before '}' token
-../src/main.c:60:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
-../src/main.c: In function 'main':
-../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
-make: *** [src/main.o] Error 1
-16:47:33 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'translateFib':
-../src/main.c:56:16: error: expected expression before 'uint16_t'
-../src/main.c:57:4: error: expected ';' before '}' token
-../src/main.c:60:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
-../src/main.c: In function 'main':
-../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
-make: *** [src/main.o] Error 1
-16:48:08 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'translateFib':
-../src/main.c:57:4: error: expected ';' before '}' token
-../src/main.c: In function 'main':
-../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
-make: *** [src/main.o] Error 1
-16:48:31 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/main.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
 Finished building: ../src/main.c
  
 Building target: asm_xample11.axf
@@ -302,24 +91,15 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
    text	   data	    bss	    dec	    hex	filename
-   1588	      0	     16	   1604	    644	asm_xample11.axf
+   1396	      0	     16	   1412	    584	asm_xample11.axf
  
-16:49:47 **** Incremental Build of configuration Debug for project asm_xample11 ****
+14:08:17 **** Incremental Build of configuration Debug for project asm_xample11 ****
 make all 
 Building file: ../src/main.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main':
-../src/main.c:79:2: error: expected declaration or statement at end of input
-../src/main.c:79:2: warning: control reaches end of non-void function [-Wreturn-type]
-make: *** [src/main.o] Error 1
-16:50:02 **** Incremental Build of configuration Debug for project asm_xample11 ****
-make all 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/main.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
 Finished building: ../src/main.c
  
 Building target: asm_xample11.axf
@@ -331,5 +111,178 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
    text	   data	    bss	    dec	    hex	filename
-   1588	      0	     16	   1604	    644	asm_xample11.axf
+   1388	      0	     16	   1404	    57c	asm_xample11.axf
  
+14:08:26 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:08:43 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:09:19 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:09:28 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:09:44 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:10:17 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1384	      0	     16	   1400	    578	asm_xample11.axf
+ 
+14:11:11 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1384	      0	     16	   1400	    578	asm_xample11.axf
+ 
+14:11:31 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:12:02 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:12:53 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1384	      0	     16	   1400	    578	asm_xample11.axf
+ 
+14:14:57 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1384	      0	     16	   1400	    578	asm_xample11.axf
+ 
+14:16:11 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:16:47 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:17:11 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
+14:19:07 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1400	      0	     16	   1416	    588	asm_xample11.axf
+ 
+14:20:30 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1400	      0	     16	   1416	    588	asm_xample11.axf
+ 
+14:23:41 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/driver" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/cmsis" -I"/Users/madisonrockwell/Documents/LPCXpresso_6.1.2/workspace/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:73:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1408	      0	     16	   1424	    590	asm_xample11.axf
+ 
+14:27:24 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+make: Nothing to be done for `all'.
