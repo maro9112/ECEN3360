@@ -9,6 +9,19 @@
 
 extern int fibonacci(int n);
 
+
+//delay code from https://www.lpcware.com/content/forum/what-do-you-use-to-delay
+void _delay_ms (uint16_t ms)
+{
+ uint16_t delay;
+ volatile uint32_t i;
+ for (delay = ms; delay >0 ; delay--)
+//1ms loop with -Os optimisation
+  {
+  for (i=3500; i >0;i--){};
+  }
+}
+
 int translateFib(int fibNum) {
 	char morse[10][6] = {"11111", "01111", "00111", "00011", "00001", "00000", "10000", "11000", "11100", "11110"};
 	int i=0;
@@ -38,15 +51,15 @@ int translateFib(int fibNum) {
 			if(digitArray[j][blinkNum]==0){
 				//blink short
 				GPIOSetValue( 0, 7, 1 );
-				sleep(500);
+				_delay_ms (500);
 				GPIOSetValue( 0, 7, 0 );
-				sleep(500);
+				_delay_ms (500);
 			}else if(digitArray[j][blinkNum]==1){
 				//blink long
 				GPIOSetValue( 0, 7, 1 );
-				sleep(1000);
+				_delay_ms (1000);
 				GPIOSetValue( 0, 7, 0 );
-				sleep(500);
+				_delay_ms (500);
 			}
 		}
 	}
@@ -57,6 +70,7 @@ int main(void) {
 	  GPIOInit();
 	  /* Set LED port pin to output */
 	  GPIOSetDir( 0, 7, 1 );
+
 	int i=1;
 	int fibNum;
 	for(i=1; i <=20; i++){

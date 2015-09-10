@@ -109,3 +109,227 @@ Finished building: ../cmsis/system_LPC11xx.c
 Building target: asm_xample11.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+16:16:12 **** Build of configuration Debug for project asm_xample11 ****
+make all 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+./src/main.o: In function `translateFib':
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
+collect2: ld returned 1 exit status
+make: *** [asm_xample11.axf] Error 1
+16:16:33 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+./src/main.o: In function `translateFib':
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
+collect2: ld returned 1 exit status
+make: *** [asm_xample11.axf] Error 1
+16:17:30 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+./src/main.o: In function `translateFib':
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
+collect2: ld returned 1 exit status
+make: *** [asm_xample11.axf] Error 1
+16:18:03 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+./src/main.o: In function `translateFib':
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
+collect2: ld returned 1 exit status
+make: *** [asm_xample11.axf] Error 1
+16:20:24 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+./src/main.o: In function `translateFib':
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
+collect2: ld returned 1 exit status
+make: *** [asm_xample11.axf] Error 1
+16:21:01 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+./src/main.o: In function `translateFib':
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
+collect2: ld returned 1 exit status
+make: *** [asm_xample11.axf] Error 1
+16:26:11 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+./src/main.o: In function `translateFib':
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
+/Users/madisonrockwell/Downloads/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
+collect2: ld returned 1 exit status
+make: *** [asm_xample11.axf] Error 1
+16:38:19 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'translateFib':
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+../src/main.c:41:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:70:1: warning: control reaches end of non-void function [-Wreturn-type]
+./src/main.o: In function `translateFib':
+/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:41: undefined reference to `sleep'
+/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:43: undefined reference to `sleep'
+/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:47: undefined reference to `sleep'
+/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:49: undefined reference to `sleep'
+collect2: ld returned 1 exit status
+make: *** [asm_xample11.axf] Error 1
+16:43:28 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'translateFib':
+Finished building: ../src/main.c
+../src/main.c:53:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+../src/main.c: In function 'main':
+../src/main.c:82:1: warning: control reaches end of non-void function [-Wreturn-type]
+./src/main.o: In function `translateFib':
+/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:53: undefined reference to `sleep'
+/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:55: undefined reference to `sleep'
+/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:59: undefined reference to `sleep'
+/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/Debug/../src/main.c:61: undefined reference to `sleep'
+collect2: ld returned 1 exit status
+make: *** [asm_xample11.axf] Error 1
+16:46:42 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'translateFib':
+../src/main.c:54:16: error: expected expression before 'uint16_t'
+../src/main.c:55:5: error: expected ';' before 'GPIOSetValue'
+../src/main.c:56:16: error: expected expression before 'uint16_t'
+../src/main.c:57:4: error: expected ';' before '}' token
+../src/main.c:60:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/main.o] Error 1
+16:47:05 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'translateFib':
+../src/main.c:55:5: error: expected ';' before 'GPIOSetValue'
+../src/main.c:56:16: error: expected expression before 'uint16_t'
+../src/main.c:57:4: error: expected ';' before '}' token
+../src/main.c:60:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/main.o] Error 1
+16:47:33 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'translateFib':
+../src/main.c:56:16: error: expected expression before 'uint16_t'
+../src/main.c:57:4: error: expected ';' before '}' token
+../src/main.c:60:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/main.o] Error 1
+16:48:08 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'translateFib':
+../src/main.c:57:4: error: expected ';' before '}' token
+../src/main.c: In function 'main':
+../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/main.o] Error 1
+16:48:31 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1588	      0	     16	   1604	    644	asm_xample11.axf
+ 
+16:49:47 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:79:2: error: expected declaration or statement at end of input
+../src/main.c:79:2: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/main.o] Error 1
+16:50:02 **** Incremental Build of configuration Debug for project asm_xample11 ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/driver" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/cmsis" -I"/Users/emilyleach314/Documents/JUNYA/DDL/asm_xample11/asm_xample11/config" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -Wa,-ahlnds=main.asm -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: asm_xample11.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker --gc-sections -Xlinker -Map=asm_xample11.map -mcpu=cortex-m0 -mthumb -T "asm_xample11_Debug.ld" -o "asm_xample11.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o ./src/main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: asm_xample11.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size asm_xample11.axf; # arm-none-eabi-objcopy -O ihex asm_xample11.axf asm_xample11.hex ;
+   text	   data	    bss	    dec	    hex	filename
+   1588	      0	     16	   1604	    644	asm_xample11.axf
+ 

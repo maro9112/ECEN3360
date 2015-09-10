@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "driver_config.h"
+#include "target_config.h"
+#include "timer32.h"
+#include "gpio.h"
+
+extern int fib(int x);
+int num;
+
+
+int fib(int x) 
+{
+	return num;
+}
+
+char morse (int dig)
+{
+	char morsifier[10][6] = {"11111", "01111", "00111", "00011", "00001", "00000", "10000", "11000", "11100", "11110"};
+	char morse = morsifier[dig];
+	return morse;
+}
+
+void blink (char morse_num [])
+{
+	
+	
+}
+
+
+void hex(int y)
+{
+    char m_num;
+	
+	while (y!=0)
+  {
+	  if (y<16)
+	  {
+		  if (y>=10)
+		  {
+			  digit = y;
+			  int digit_1 = digit % 10;
+			  m_num = morse (digit_1);
+			  blink (m_num);
+			  int digit_2 = digit / 10;
+			  m_num = morse (digit_2);
+			  blink (m_num);  
+		  }
+		  
+		  else
+		  {
+			  m_num = morse (y);
+			  blink (m_num);
+		  }
+		  y=0;
+	  }
+	  else
+	  {
+		  int digit = y;
+		  while (digit>=16)
+		  {
+			  digit = digit/16;
+		  }
+		  if (digit>=10)
+		  {
+			  int digit_1 = digit % 10;
+			  m_num = morse (digit_1);
+			  blink (m_num);
+			  int digit_2 = digit / 10;
+			  m_num = morse (digit_2);
+			  blink (m_num);
+			  
+		  }
+		  else
+		  {
+			  m_num = morse(digit);
+			  blink(m_num);
+		  }
+		  
+		  y = y-digit*16;
+	  }
+	  
+	  return y;
+ 
+  }
+}
+
+int main(void)
+{
+
+	int i = 1;
+	for (i=1; i<20; i++)
+	{
+		fib(i);
+		hex(num);
+		
+		
+	}
+}
+
+
